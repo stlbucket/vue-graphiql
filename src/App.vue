@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <graphiql></graphiql>
+    <graphiql
+      :fetcher="fetcher"
+    ></graphiql>
   </div>
 </template>
 
@@ -11,6 +13,11 @@ export default {
   name: 'app',
   components: {
     Graphiql
+  },
+  methods: {
+    fetcher (query) {
+      console.log('query', query)
+    }
   }
 }
 </script>
